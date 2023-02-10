@@ -52,7 +52,6 @@ sub ProcessInterface
 	{
 		print "creating rrd database for $_[0] interface...\n";
 		RRDs::create "$rrd/w$_[0].rrd",
-			"-s 300",
 			"DS:snr:GAUGE:600:0:60",
 			"DS:signal:GAUGE:600:-256:0",
 			"DS:noise:GAUGE:600:-256:0",
